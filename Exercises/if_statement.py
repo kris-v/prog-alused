@@ -2,6 +2,18 @@
 
 
 def are_equal(num_a: int, num_b: int) -> str:
+    """
+    Return "equal" if given numbers are equal and "not equal" if not.
+
+    are_equal(12, 13) => "not equal"
+    are_equal(5, 5) => "equal"
+
+    :param num_a: first number
+    :param num_b: second number
+
+    :return: "equal" if given numbers are equal and "not equal" if they aren't.
+    """
+    # your code goes here
     if num_a == num_b:
         return "equal"
     else:
@@ -9,12 +21,23 @@ def are_equal(num_a: int, num_b: int) -> str:
 
 
 def positive_or_negative(num_a: int) -> str:
+    """
+    Return "negative", "positive" or "zero" depending on the given integer.
+
+    positive_or_negative(12) => "positive"
+    positive_or_negative(0) => "zero"
+    positive_or_negative(-12) => "negative"
+
+    :param num_a: given integer
+    :return "negative", "positive" or "zero" depending on the given integer.
+    """
+    # your code goes here
     if num_a > 0:
         return "positive"
-    elif num_a < 0:
-       return "negative"
-    else:
+    elif num_a == 0:
         return "zero"
+    else:
+        return "negative"
 
 
 def is_in_string(letter: str, word: str) -> bool:
@@ -29,6 +52,7 @@ def is_in_string(letter: str, word: str) -> bool:
     :return: boolean depending on if given letter is in given word.
     """
     # your code goes here
+    return (letter in word)
 
 
 def are_same_length(str_a: str, str_b: str) -> bool:
@@ -43,6 +67,7 @@ def are_same_length(str_a: str, str_b: str) -> bool:
     :return boolean True or False.
     """
     # your code goes here
+    return len(str_a) == len(str_b)
 
 
 def is_letter_or_digit(symbol: str) -> str:
@@ -57,6 +82,12 @@ def is_letter_or_digit(symbol: str) -> str:
     :return "letter", "digit" or "other".
     """
     # your code goes here
+    if symbol.isdigit():
+        return ("digit")
+    elif symbol.isalpha():
+        return "letter"
+    else:
+        return "other"
 
 
 def are_last_symbols_same(str_a: str, str_b: str) -> bool:
@@ -71,6 +102,7 @@ def are_last_symbols_same(str_a: str, str_b: str) -> bool:
     :return boolean.
     """
     # your code goes here
+    return str_a[-1] == str_b[-1]
 
 
 def hundred(num_a: int) -> int:
@@ -85,3 +117,8 @@ def hundred(num_a: int) -> int:
     :return int.
     """
     # your code goes here
+
+    if num_a <= 100:
+        return 100 - num_a
+    else:
+        return num_a % 100
