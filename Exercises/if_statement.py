@@ -13,7 +13,6 @@ def are_equal(num_a: int, num_b: int) -> str:
 
     :return: "equal" if given numbers are equal and "not equal" if they aren't.
     """
-    # your code goes here
     if num_a == num_b:
         return "equal"
     else:
@@ -31,7 +30,6 @@ def positive_or_negative(num_a: int) -> str:
     :param num_a: given integer
     :return "negative", "positive" or "zero" depending on the given integer.
     """
-    # your code goes here
     if num_a > 0:
         return "positive"
     elif num_a == 0:
@@ -51,7 +49,6 @@ def is_in_string(letter: str, word: str) -> bool:
     :param word: given word.
     :return: boolean depending on if given letter is in given word.
     """
-    # your code goes here
     return (letter in word)
 
 
@@ -66,7 +63,6 @@ def are_same_length(str_a: str, str_b: str) -> bool:
     :param str_a: second string
     :return boolean True or False.
     """
-    # your code goes here
     return len(str_a) == len(str_b)
 
 
@@ -81,7 +77,6 @@ def is_letter_or_digit(symbol: str) -> str:
     :param symbol: symbol
     :return "letter", "digit" or "other".
     """
-    # your code goes here
     if symbol.isdigit():
         return ("digit")
     elif symbol.isalpha():
@@ -101,7 +96,6 @@ def are_last_symbols_same(str_a: str, str_b: str) -> bool:
     :param str_b: second string.
     :return boolean.
     """
-    # your code goes here
     return str_a[-1] == str_b[-1]
 
 
@@ -116,8 +110,6 @@ def hundred(num_a: int) -> int:
     :param num_a: given positive integer
     :return int.
     """
-    # your code goes here
-
     if num_a <= 100:
         return 100 - num_a
     else:
